@@ -19,8 +19,8 @@ for packet in cap.sniff_continuously():
 	#print(data_of_ip_gn)
 	alerts = get_malicious.ip(otx, args['ip'])
     	if len(alerts) > 0:
-        	print('Identified as potentially malicious')
+        	print('Identified as potentially malicious from AlienVault OTX')
         	print(str(alerts))
     	else:
-        	print('Unknown or not identified as malicious')
+        	print('Unknown or not identified as malicious from AlienVault OTX')
 		time.sleep(2)
