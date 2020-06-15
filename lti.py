@@ -17,7 +17,7 @@ for packet in cap.sniff_continuously():
 	#Geynoise query
 	#data_of_ip_gn=api_client.quick(packet.ip.src)
 	#print(data_of_ip_gn)
-	alerts = get_malicious.ip(otx, args['ip'])
+	alerts = get_malicious.ip(otx, args['packet.ip.src'])
     	if len(alerts) > 0:
         	print('Identified as potentially malicious from AlienVault OTX')
         	print(str(alerts))
